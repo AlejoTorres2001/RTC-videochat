@@ -6,6 +6,7 @@
     "dev": "vite --port 3001 --host",
     "eslint": "eslint './**/*.{js,ts,jsx,tsx}'",
     "build": "vite build",
+    "start" : "vite --port $PORT",
     "preview": "vite preview"
   },
   "dependencies": {
