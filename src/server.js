@@ -5,7 +5,7 @@ const server = require('http').createServer(app)
 const cors = require('cors')
 const io = require('socket.io')(server, {
   cors: {
-    origin: 'http://localhost:3001',
+    origin: process.env.NODE_ENV === 'production' ? 'https://rtc-videochat-client.herokuapp.com' : 'http://localhost:3001',
     methods: ['GET,POST,PUT,DELETE']
   }
 })
@@ -15,13 +15,13 @@ const PORT = process.env.PORT || 3000
 io.on('connection', (socket) => {
   socket.emmit('me', socket.id)
   socket.on('disconnet', () => {
-    socket.broadcast.emmit('callended')
+    socket.broadcast.emmit('callEnded')
   })
-  socket.on('calluser', ({ userToCall, signalData, from, name }) => {
-    io.to(userToCall).emmit('calluser', { signal: signalData, from, name })
+  socket.on('callUser', ({ userToCall, signalData, from, name }) => {
+    io.to(userToCall).emmit('callUser', { signal: signalData, from, name })
   })
-  socket.on('answercall', (data) => {
-    io.to(data.to).emmit('callaccepted', data.signal)
+  socket.on('answerCall', (data) => {
+    io.to(data.to).emmit('callAccepted', data.signal)
   })
 })
 app.get('/health', (req, res) => {
