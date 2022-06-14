@@ -10,9 +10,9 @@ import io from 'socket.io-client'
 import './App.css'
 
 const socket = io.connect(
-  process.env.NODE_ENV === 'production'
-    ? 'https://rtc-videochat-client.herokuapp.com'
-    : 'http://localhost:5000'
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:5000'
+    : 'https://rtc-videochat-client.herokuapp.com'
 )
 function App() {
   const [me, setMe] = useState('')
