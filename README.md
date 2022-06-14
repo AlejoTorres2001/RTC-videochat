@@ -1,70 +1,80 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  
+# Fontend Branch
 
-## Available Scripts
+  
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+<div align="center">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  **this is the master branch for the client code of this implementation of the *RTC-videochat***
+  
 
-### `npm test`
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Both **Backend** and **Frontend** should be considered as separated projects each one with its dependencies. if you are about to contribute to this project or just to play around with the code I suggest cloning each master branch in different folders
 
-### `npm run build`
+<div align="center">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ <img width="1220" alt="image" src="https://user-images.githubusercontent.com/80418452/173633547-388ef594-8b65-41aa-9e56-e9f230edd1f1.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  
+</div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## About The Project
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+a react app that displays you video stram, allows yuo to copy you Socket ID, initiate and end calls between peers
+I would like to point out that the session of the user is handled inside the memory of the client (state) using the ContextAPI, only storing the refreshToken in a HTTPS-only cookie.
+I'm using LocalStorage just to handle the check of a trust device.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Stack used 
+- <img  alt="JavaScript"  src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
+- [<img  alt="React"  src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />](https://es.reactjs.org/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [<img  alt="React"  src="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white" />](https://v4.mui.com/)
 
-## Learn More
+**Using *Peer.js* as a wrapper for the WebRTC API.**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+<div align="center">
+  
+![Alt](https://repobeats.axiom.co/api/embed/5fbc4ee686500b4b408a304bd7dae638e60c21c9.svg "Repobeats analytics image")
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If you have a suggestion that would make this better, please fork the repo and create a Pull Request. You can also simply [open an issue](https://github.com/AlejoTorres2001/jwt-auth-app/issues) with the tag *enhancement*.
 
-### Making a Progressive Web App
+Don't forget to **give the project a star ⭐!** 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Fork the project
 
-### Advanced Configuration
+2. Clone the repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+git clone -b master-frontend https://github.com/AlejoTorres2001/RTC-videochat.git
+```
 
-### Deployment
+3. Create your Feature Branch
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+git checkout -b feature/AmazingFeature
+```
 
-### `npm run build` fails to minify
+4. Push to the Branch
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git push origin feature/AmazingFeature
+```
+
+5. Open a Pull Request
+
+
