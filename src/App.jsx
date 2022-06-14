@@ -9,11 +9,12 @@ import Peer from 'simple-peer'
 import io from 'socket.io-client'
 import './App.css'
 
-const socket = io.connect(
-  process.env.NODE_ENV === 'development'
-    ? 'http://localhost:5000'
-    : 'https://rtc-videochat-client.herokuapp.com'
-)
+const socket = io.connect('https://rtc-videochat-client.herokuapp.com')
+
+// process.env.NODE_ENV === 'development'
+//   ? 'http://localhost:5000'
+//   : 'https://rtc-videochat-client.herokuapp.com'
+
 function App() {
   const [me, setMe] = useState('')
   const [stream, setStream] = useState()
