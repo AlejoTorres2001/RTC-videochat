@@ -48,14 +48,14 @@ function App() {
     const peer = new Peer({
       initiator: true,
       trickle: false,
-      stream: stream
+      stream
     })
     peer.on('signal', (data) => {
       socket.emit('callUser', {
         userToCall: id,
         signalData: data,
         from: me,
-        name: name
+        name
       })
     })
     peer.on('stream', (stream) => {
@@ -74,7 +74,7 @@ function App() {
     const peer = new Peer({
       initiator: false,
       trickle: false,
-      stream: stream
+      stream
     })
     peer.on('signal', (data) => {
       socket.emit('answerCall', { signal: data, to: caller })
