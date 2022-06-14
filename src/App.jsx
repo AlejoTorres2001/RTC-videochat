@@ -15,7 +15,7 @@ const socket = io.connect(
     : 'http://localhost:5000'
 )
 function App() {
-  const [me, setMe] = useState('')
+  const [me, setMe] = useState(' ')
   const [stream, setStream] = useState()
   const [receivingCall, setReceivingCall] = useState(false)
   const [caller, setCaller] = useState('')
