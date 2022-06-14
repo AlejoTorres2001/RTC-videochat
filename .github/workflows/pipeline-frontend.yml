@@ -1,4 +1,4 @@
-name: Front-end Deployment Pipeline
+name: Frontend Deployment Pipeline
 
 on:
   push:
