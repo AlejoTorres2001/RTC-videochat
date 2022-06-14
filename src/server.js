@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000
 const io = require('socket.io')(server, {
   cors: {
     origin: process.env.NODE_ENV === 'production' ? 'https://rtc-videochat-backend.herokuapp.com' : 'http://localhost:3000',
-    methods: ['GET', 'POST']
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
   }
 })
 
