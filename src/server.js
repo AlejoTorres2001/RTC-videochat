@@ -2,6 +2,7 @@ const express = require('express')
 const http = require('http')
 const app = express()
 const server = http.createServer(app)
+const PORT = process.env.PORT || 5000
 const io = require('socket.io')(server, {
   cors: {
     origin: process.env.NODE_ENV === 'production' ? 'https://rtc-videochat-backend.herokuapp.com' : 'http://localhost:3000',
@@ -28,5 +29,11 @@ io.on('connection', (socket) => {
     io.to(data.to).emit('callAccepted', data.signal)
   })
 })
+app.get('/health', (req, res) => {
+  res.send('ok')
+})
+app.get('/', (req, res) => {
+  res.send('server ready')
+})
 
-server.listen(5000, () => console.log('server is running on port 5000'))
+server.listen(PORT, () => console.log(`server is running on port ${PORT}`))
